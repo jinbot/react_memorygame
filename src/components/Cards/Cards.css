@@ -1,0 +1,41 @@
+.box{
+  margin: auto;
+
+
+}
+.card{
+
+  width:19%;
+  height: 100px;
+  margin: 5px;
+  background-color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+  transition: transform 2s;
+}
+
+/*.card:active{
+
+  transform: rotateY(180deg);
+  transition: transform 2s;
+}
+.card:active .imgcard{
+  transform: rotateY(0deg);
+  transition: transform 2s;
+
+}
+*/
+.imgcard{
+
+  width:100%;
+  height: 100px;
+  position: absolute;
+  display: inline-block;
+  background-color: #c8c7c7;
+  cursor: pointer;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  transition: transform 2s;
+}
