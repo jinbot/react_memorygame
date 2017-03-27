@@ -15,7 +15,11 @@
   transform: rotateY(0deg);
   transition: transform 2s;
 }
+.card > img {
+  position: relative;
+  width:10px;
 
+}
 /*.card:active{
 
   transform: rotateY(180deg);
@@ -38,4 +42,5 @@
   backface-visibility: hidden;
   transform: rotateY(180deg);
   transition: transform 2s;
+  text-align: center;
 }
