@@ -1,5 +1,5 @@
 import React,{ Component } from 'react';
-import { Cards,Count } from '../../components';
+import { Cards,Count,GameEnd } from '../../components';
 import $ from 'jquery';
 import img1 from '../../img/1.png';
 import img2 from '../../img/2.png'
@@ -14,7 +14,9 @@ class CardContainer extends Component{
       num: [ 1, 1, 2, 2, 3,
             3, 4, 4, 5, 5 ],
       cnt: 0,
-      prevclick: 0
+      correct_cnt:0,
+      prevclick: 0,
+      Endbox_visible:"false"
     }
 
     console.log(this.state.num);
@@ -56,6 +58,10 @@ class CardContainer extends Component{
 
             $("#imgcard"+prevclick).animate({opacity:'0.0'},1000);
         }, 1000,this.state.prevclick);
+        this.setState({
+          correct_cnt: ++this.state.correct_cnt
+        })
+
       }
       else {
         setTimeout( function(prevclick) {
@@ -66,9 +72,18 @@ class CardContainer extends Component{
         }, 1000,this.state.prevclick);
       }
     }
+    if(this.state.correct_cnt===5){
+
+      this.setState({
+        Endbox_visible: "true"
+      })
+
+    }
+    console.log(this.state.Endbox_visible);
     this.setState({
       prevclick: clickcardid
     })
+
   }
   componentDidMount(){
   this.setState({
@@ -80,7 +95,9 @@ class CardContainer extends Component{
     return(
       <div>
         <Cards onCheck={this.gamecontrol}/>
-        <Count cnt={Math.ceil(this.state.cnt/2)}/>
+        <Count cnt={Math.ceil(this.state.cnt/2)} />
+        <GameEnd visible={this.state.Endbox_visible} cnt={Math.ceil(this.state.cnt/2)}/>
+
       </div>
     );
   }

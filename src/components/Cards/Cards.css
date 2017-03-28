@@ -1,7 +1,8 @@
+body{
+  margin: 0;
+}
 .box{
   margin: auto;
-
-
 }
 .card{
 
@@ -12,7 +13,7 @@
   cursor: pointer;
   display: inline-block;
   backface-visibility: hidden;
-  
+
   transition: transform 2s;
 }
 .card > img {
