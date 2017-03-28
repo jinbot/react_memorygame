@@ -1,4 +1,4 @@
-import React,{ Component, PropTypes } from 'react';
+import React,{ Component } from 'react';
 import { Cards,Count } from '../../components';
 import $ from 'jquery';
 import img1 from '../../img/1.png';
@@ -25,7 +25,7 @@ class CardContainer extends Component{
     this.setState({
       cnt: ++this.state.cnt
     })
-    let cnt=this.state.cnt;
+
     let clickcardid=e.target.id;
     let card=$("#"+clickcardid);
     let imgcard=$("#imgcard"+clickcardid);
@@ -45,14 +45,11 @@ class CardContainer extends Component{
       transform: "rotateY(180deg)",
       transition: "transform 1s"
     }
-    let cardout={
-      opacity:0.0,
-      transition: "opacity 1s"
-    }
+
     card.css(cardrotate);
     imgcard.css(imgcardrotate);
-    if(this.state.cnt%2==0){
-      if(this.state.num[clickcardid]==this.state.num[this.state.prevclick]){
+    if(this.state.cnt%2===0){
+      if(this.state.num[clickcardid]===this.state.num[this.state.prevclick]){
         setTimeout( function(prevclick) {
 
             imgcard.animate({opacity:'0.0'},1000);
@@ -74,7 +71,9 @@ class CardContainer extends Component{
     })
   }
   componentDidMount(){
-    this.state.num=setting(this.state.num);
+  this.setState({
+    num: setting(this.state.num)
+  })
 
   }
   render(){
