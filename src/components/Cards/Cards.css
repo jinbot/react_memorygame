@@ -12,11 +12,11 @@
   cursor: pointer;
   display: inline-block;
   backface-visibility: hidden;
-  transform: rotateY(0deg);
+  
   transition: transform 2s;
 }
 .card > img {
-  position: relative;
+
   width:10px;
 
 }
