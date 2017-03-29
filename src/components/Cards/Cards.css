@@ -1,6 +1,7 @@
 body{
   margin: 0;
   background-color: #DEFFFF;
+  min-width: 1024px;
 }
 .box{
   margin: auto;
