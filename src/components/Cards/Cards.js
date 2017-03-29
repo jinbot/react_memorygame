@@ -23,7 +23,16 @@ class Cards extends Component{
         <div className="card" onClick={this.cardClick} id="7"><div className="imgcard" id="imgcard7"></div></div>
         <div className="card" onClick={this.cardClick} id="8"><div className="imgcard" id="imgcard8"></div></div>
         <div className="card" onClick={this.cardClick} id="9"><div className="imgcard" id="imgcard9"></div></div>
-
+        <div className="card" onClick={this.cardClick} id="10"><div className="imgcard" id="imgcard10"></div></div>
+        <div className="card" onClick={this.cardClick} id="11"><div className="imgcard" id="imgcard11"></div></div>
+        <div className="card" onClick={this.cardClick} id="12"><div className="imgcard" id="imgcard12"></div></div>
+        <div className="card" onClick={this.cardClick} id="13"><div className="imgcard" id="imgcard13"></div></div>
+        <div className="card" onClick={this.cardClick} id="14"><div className="imgcard" id="imgcard14"></div></div>
+        <div className="card" onClick={this.cardClick} id="15"><div className="imgcard" id="imgcard15"></div></div>
+        <div className="card" onClick={this.cardClick} id="16"><div className="imgcard" id="imgcard16"></div></div>
+        <div className="card" onClick={this.cardClick} id="17"><div className="imgcard" id="imgcard17"></div></div>
+        <div className="card" onClick={this.cardClick} id="18"><div className="imgcard" id="imgcard18"></div></div>
+        <div className="card" onClick={this.cardClick} id="19"><div className="imgcard" id="imgcard19"></div></div>
 
 
 

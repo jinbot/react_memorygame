@@ -13,12 +13,15 @@ class GameEnd extends Component{
   componentWillReceiveProps(nextProps){
 
 
-    if(nextProps.visible=="true"){
+    if(nextProps.visible==="true"){
 
-      $(".box").remove();
-      $(".CountBox").remove();
-      $(".Endbox").fadeIn(1000);
-      $(".Endbox").css({"height":$(window).height()+"px"});
+    setTimeout(function(){
+        $(".box").remove();
+        $(".CountBox").remove();
+        $(".Endbox").fadeIn(1000);
+        $(".Endbox").css({"height":$(window).height()+"px"});
+
+      } ,1000); 
     }else{
       $(".Endbox").fadeOut(0);
     }

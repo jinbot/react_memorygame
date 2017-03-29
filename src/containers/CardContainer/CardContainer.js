@@ -1,25 +1,33 @@
 import React,{ Component } from 'react';
 import { Cards,Count,GameEnd } from '../../components';
 import $ from 'jquery';
-import img1 from '../../img/1.png';
+import img1 from '../../img/1.png'
 import img2 from '../../img/2.png'
 import img3 from '../../img/3.png'
 import img4 from '../../img/4.png'
 import img5 from '../../img/5.png'
+import img6 from '../../img/6.png'
+import img7 from '../../img/7.png'
+import img8 from '../../img/8.png'
+import img9 from '../../img/9.png'
+import img10 from '../../img/10.png'
+
 
 class CardContainer extends Component{
   constructor(props){
     super(props);
     this.state={
       num: [ 1, 1, 2, 2, 3,
-            3, 4, 4, 5, 5 ],
+            3, 4, 4, 5, 5,
+            6, 6, 7, 7, 8,
+            8, 9, 9, 10, 10],
       cnt: 0,
       correct_cnt:0,
       prevclick: 0,
       Endbox_visible:"false"
     }
 
-    console.log(this.state.num);
+    
     this.gamecontrol=this.gamecontrol.bind(this);
   }
 
@@ -72,14 +80,14 @@ class CardContainer extends Component{
         }, 1000,this.state.prevclick);
       }
     }
-    if(this.state.correct_cnt===5){
+    if(this.state.correct_cnt===10){
 
       this.setState({
         Endbox_visible: "true"
       })
 
     }
-    console.log(this.state.Endbox_visible);
+
     this.setState({
       prevclick: clickcardid
     })
@@ -112,7 +120,7 @@ function setting(newarr){
     newarr[c]=newarr[b];
     newarr[b] = a;
   }
-  for(let j=0;10>j;j++){
+  for(let j=0;20>j;j++){
     switch (newarr[j]) {
       case 1:
         $("#imgcard"+j).html(`<img style="width:100px;" src=${img1}>`);
@@ -128,6 +136,21 @@ function setting(newarr){
         break;
       case 5:
         $("#imgcard"+j).html(`<img style="width:100px;" src=${img5}>`);
+        break;
+      case 6:
+        $("#imgcard"+j).html(`<img style="width:100px;" src=${img6}>`);
+        break;
+      case 7:
+        $("#imgcard"+j).html(`<img style="width:100px;" src=${img7}>`);
+        break;
+      case 8:
+        $("#imgcard"+j).html(`<img style="width:100px;" src=${img8}>`);
+        break;
+      case 9:
+        $("#imgcard"+j).html(`<img style="width:100px;" src=${img9}>`);
+        break;
+      case 10:
+        $("#imgcard"+j).html(`<img style="width:100px;" src=${img10}>`);
         break;
       default:
     }
