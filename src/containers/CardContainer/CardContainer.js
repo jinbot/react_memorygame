@@ -27,7 +27,7 @@ class CardContainer extends Component{
       Endbox_visible:"false"
     }
 
-    
+
     this.gamecontrol=this.gamecontrol.bind(this);
   }
 
@@ -41,19 +41,19 @@ class CardContainer extends Component{
     let imgcard=$("#imgcard"+clickcardid);
     let cardrotate={
       transform: "rotateY(180deg)",
-      transition: "transform 1s"
+
     }
     let imgcardrotate={
       transform: "rotateY(0deg)",
-      transition: "transform 1s"
+
     }
     let cardrotateback={
       transform: "rotateY(0deg)",
-      transition: "transform 1s"
+
     }
     let imgcardrotateback={
       transform: "rotateY(180deg)",
-      transition: "transform 1s"
+
     }
 
     card.css(cardrotate);
@@ -62,10 +62,10 @@ class CardContainer extends Component{
       if(this.state.num[clickcardid]===this.state.num[this.state.prevclick]){
         setTimeout( function(prevclick) {
 
-            imgcard.animate({opacity:'0.0'},1000);
+            imgcard.animate({opacity:'0.0'},700);
 
-            $("#imgcard"+prevclick).animate({opacity:'0.0'},1000);
-        }, 1000,this.state.prevclick);
+            $("#imgcard"+prevclick).animate({opacity:'0.0'},700);
+        }, 900,this.state.prevclick);
         this.setState({
           correct_cnt: ++this.state.correct_cnt
         })
@@ -77,7 +77,7 @@ class CardContainer extends Component{
             imgcard.css(imgcardrotateback);
             $("#"+prevclick).css(cardrotateback);
             $("#imgcard"+prevclick).css(imgcardrotateback);
-        }, 1000,this.state.prevclick);
+        }, 900,this.state.prevclick);
       }
     }
     if(this.state.correct_cnt===10){
