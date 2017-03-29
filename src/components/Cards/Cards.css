@@ -1,5 +1,6 @@
 body{
   margin: 0;
+  background-color: #DEFFFF;
 }
 .box{
   margin: auto;
@@ -9,11 +10,11 @@ body{
   width:19%;
   height: 100px;
   margin: 5px;
-  background-color: #333333;
+  background-color: #55CC9E;
   cursor: pointer;
   display: inline-block;
   backface-visibility: hidden;
-
+  border-radius: 5px;
   transition: transform 2s;
 }
 .card > img {
@@ -38,8 +39,9 @@ body{
   height: 100px;
   position: absolute;
   display: inline-block;
-  background-color: #c8c7c7;
+  background-color: #497F7F;
   cursor: pointer;
+  border-radius: 5px;
   backface-visibility: hidden;
   transform: rotateY(180deg);
   transition: transform 2s;
