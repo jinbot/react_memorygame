@@ -19,7 +19,7 @@ class BoardContainer extends Component{
     if (this.state.value[index]===0) {
       if(this.state.turn%2===0){
           e.target.style.backgroundColor="red";
-          document.getElementById("preview").style.backgroundColor="blue";
+          
           this.setState({
             value: update(
                 this.state.value,
@@ -31,7 +31,7 @@ class BoardContainer extends Component{
       }
       else{
         e.target.style.backgroundColor="blue";
-        document.getElementById("preview").style.backgroundColor="red";
+
         this.setState({
           value: update(
               this.state.value,
@@ -87,9 +87,7 @@ class BoardContainer extends Component{
         <div id="box">
           <Board StateChangeHandle={this.StateChange}/>
           <div id="winnerbox"></div>
-          <br/><br/>
-          turn <br/>
-          <div id="preview" className="boardboxs defaultbox"></div>
+
         </div>
     );
   }

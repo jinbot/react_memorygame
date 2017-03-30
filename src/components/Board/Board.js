@@ -13,7 +13,7 @@ class Board extends Component{
   }
   render(){
     return(
-      <div>
+      <div className="boardwrap">
         <div className="boardboxs" id="0" onClick={this.handleClick}>
         </div>
         <div className="boardboxs" id="1" onClick={this.handleClick}>

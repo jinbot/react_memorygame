@@ -6,6 +6,9 @@
   margin-top: 0px;
   margin-bottom: 0px;
 }
+.boardwrap{
+  margin: 20px;
+}
 .defaultbox{
   background-color: red;
 }
